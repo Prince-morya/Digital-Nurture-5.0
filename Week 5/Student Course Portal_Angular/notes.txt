@@ -1,0 +1,14 @@
+Hands-On 1 — Task 1: Generated File Notes
+
+angular.json         - Workspace-level configuration; defines build targets, budgets, styles and assets for the CLI.
+tsconfig.json         - Base TypeScript compiler options shared across the whole workspace.
+tsconfig.app.json      - Extends the base config specifically for the browser application build.
+package.json         - Lists npm dependencies/devDependencies and the CLI scripts (start, build, test).
+src/main.ts          - Application entry point; bootstraps the standalone AppComponent with appConfig.
+src/app/app.config.ts    - Standalone alternative to app.module.ts; registers providers such as the router.
+src/app/app.component.ts  - Root component; hosts the header and the router-outlet for all pages.
+src/index.html        - The single HTML shell the SPA is injected into; contains the <app-root> tag.
+
+Angular budgets (angular.json -> architect.build.configurations.production.budgets):
+maximumWarning - build emits a warning once the bundle passes this size.
+maximumError  - build fails once the bundle passes this size, forcing you to address bundle bloat before shipping.

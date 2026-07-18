@@ -1,0 +1,29 @@
+<section class="course-list-page">
+  <h2>Available Courses</h2>
+
+  <input
+    class="search-box"
+    type="text"
+    placeholder="Search courses..."
+    [(ngModel)]="searchTerm"
+    name="searchTerm"
+  />
+
+  <p *ngIf="isLoading">Loading courses...</p>
+
+  <ng-container *ngIf="!isLoading">
+    <ng-container *ngIf="filteredCourses.length > 0; else noCourses">
+      <app-course-card
+        *ngFor="let course of filteredCourses; trackBy: trackByCourseId"
+        [course]="course"
+        (enrollRequested)="onEnroll($event)"
+      ></app-course-card>
+    </ng-container>
+
+    <ng-template #noCourses>
+      <p>No courses available.</p>
+    </ng-template>
+  </ng-container>
+
+  <p *ngIf="selectedCourseId">Selected course ID: {{ selectedCourseId }}</p>
+</section>

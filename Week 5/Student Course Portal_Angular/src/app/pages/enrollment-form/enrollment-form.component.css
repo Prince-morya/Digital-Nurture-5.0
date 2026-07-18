@@ -1,0 +1,62 @@
+.enrollment-page {
+  max-width: 420px;
+  background-color: #fff;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.field {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.field input,
+.field select {
+  padding: 7px 10px;
+  border: 1px solid #ccd3da;
+  border-radius: 4px;
+}
+
+.checkbox-field label {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.error {
+  color: #d64545;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.success {
+  color: #2f9e44;
+  margin-top: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f4287;
+  color: #fff;
+  cursor: pointer;
+}
+
+.actions button:disabled {
+  background-color: #adb5bd;
+  cursor: not-allowed;
+}

@@ -1,0 +1,11 @@
+.course-list-page {
+  max-width: 640px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccd3da;
+  border-radius: 4px;
+}
