@@ -1,0 +1,25 @@
+<section class="home-page">
+  <h1>{{ portalName }}</h1>
+  <p>Track your courses, enrollments and grades all in one place.</p>
+
+  <div class="stats-row">
+    <div class="stat"><span>{{ coursesAvailable$ | async }}</span>Courses Available</div>
+    <div class="stat"><span>{{ enrolledCount$ | async }}</span>Enrolled</div>
+    <div class="stat"><span>{{ gpa }}</span>GPA</div>
+  </div>
+
+  <app-course-summary-widget></app-course-summary-widget>
+
+  <button type="button" [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+  <p *ngIf="message">{{ message }}</p>
+
+  <div class="search-demo">
+    <input type="text" [(ngModel)]="searchTerm" name="homeSearch" placeholder="Try typing here" />
+    <!--
+      [property] pushes a value one-way from the component into the DOM.
+      [(ngModel)] adds a listener on top of that, so typing in the input
+      flows back into searchTerm as well — a true two-way bridge.
+    -->
+    <p>Searching for: {{ searchTerm }}</p>
+  </div>
+</section>

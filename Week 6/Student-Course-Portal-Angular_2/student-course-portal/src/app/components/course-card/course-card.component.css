@@ -1,0 +1,57 @@
+.course-card {
+  border: 1px solid #d7dde3;
+  border-left: 4px solid #868e96;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.course-card.card--full {
+  border-right: 3px solid #f08c00;
+}
+
+.course-card.expanded {
+  padding-bottom: 20px;
+}
+
+.code {
+  color: #6b7684;
+  font-size: 0.85rem;
+  margin: 2px 0 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.badge--passed { background-color: #2f9e44; }
+.badge--failed { background-color: #d64545; }
+.badge--pending { background-color: #868e96; }
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f4287;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.details {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+}

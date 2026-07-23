@@ -1,0 +1,13 @@
+.profile-page {
+  max-width: 480px;
+  background-color: #fff;
+  border: 1px solid #e1e5e9;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.note {
+  color: #6b7684;
+  font-size: 0.85rem;
+  margin-top: 16px;
+}

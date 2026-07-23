@@ -1,0 +1,17 @@
+<section class="profile-page">
+  <h2>Student Profile</h2>
+  <p><strong>Name:</strong> {{ studentName }}</p>
+  <p><strong>Program:</strong> {{ program }}</p>
+  <p><strong>Current Semester:</strong> {{ currentSemester }}</p>
+
+  <h3>Enrolled Courses</h3>
+  <ul *ngIf="(enrolledCourses$ | async)?.length; else noneEnrolled">
+    <li *ngFor="let course of enrolledCourses$ | async">{{ course.name }} ({{ course.code }})</li>
+  </ul>
+  <ng-template #noneEnrolled>
+    <p class="note">No courses enrolled yet — head to the course list to get started.</p>
+  </ng-template>
+
+  <h3>Notifications</h3>
+  <app-notification></app-notification>
+</section>

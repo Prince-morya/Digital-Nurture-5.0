@@ -1,0 +1,8 @@
+.not-found-page {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.not-found-page a {
+  color: #1f4287;
+}

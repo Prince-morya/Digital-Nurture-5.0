@@ -1,0 +1,10 @@
+<section class="course-detail-page" *ngIf="course; else notFoundBlock">
+  <h2>{{ course.name }}</h2>
+  <p>Code: {{ course.code }}</p>
+  <p>Credits: {{ course.credits }}</p>
+  <p>Status: {{ course.gradeStatus }}</p>
+</section>
+
+<ng-template #notFoundBlock>
+  <p class="missing" *ngIf="notFound">That course could not be found.</p>
+</ng-template>
